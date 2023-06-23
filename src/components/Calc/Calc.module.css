@@ -1,3 +1,35 @@
 .card {
-    padding: 2em;
+    padding: 2em 0.8em;
 }
+
+.button {
+    margin-right: 12px;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 0.8em;
+    border: 1px solid transparent;
+}
+
+.button:hover {
+    border-color: #646cff;
+    
+}
+
+.buttonCalculate {
+    margin-right: 12px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    font-size: 0.8em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    cursor: pointer;
+    transition: border-color 0.25s;
+
+}
+
+.buttonCalculate:hover {
+    border-color: #646cff;
+}
+

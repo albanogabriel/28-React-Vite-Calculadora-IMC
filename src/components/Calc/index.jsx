@@ -32,19 +32,19 @@ const Calc = () => {
 
     return (
         <div className={styles.card}>
-            <input onChange={(event) => setHeight(event.target.value)} type="text" placeholder="insert your height" />
-            <input onChange={(event) => setWeight(event.target.value)} type="text" placeholder="insert your weight" />
-            <button type="submit" onClick={calculateIMC}>Calculate your IMC</button>
+            <input className={styles.button} onChange={(event) => setHeight(event.target.value)} type="text" placeholder="height ex: 1.75" />
+            <input className={styles.button} onChange={(event) => setWeight(event.target.value)} type="text" placeholder="weight ex: 90" />
+            <button className={styles.buttonCalculate} type="submit" onClick={calculateIMC}>Calculate</button>
             
             {(IMC.length == 0) ? '' :
             (IMC > 0 && IMC <= 18.5) ? (<p>Seu IMC é de {IMC}, MENOR QUE 18,5, classificado como: Magreza e grau 0 </p>) :
             (IMC > 18.5 && IMC <= 25) ? (<p>Seu IMC é de {IMC}, ENTRE 18,5 E 24,9, classificado como: Normal e grau 0 </p>) :
             (IMC > 25.0 && IMC <= 30) ? (<p>Seu IMC é de {IMC}, ENTRE 25,0 E 29,9, classificado como: Sobrepeso e grau 1</p>) : 
             (IMC > 30 && IMC <= 40) ? (<p>Seu IMC é de {IMC}, ENTRE 30,0 E 39,9, classificado como: Obesidade e grau 2 </p>) :
-            (IMC > 40 > 250) ? (<p>Seu IMC é de {IMC}, Maior que 40, classificado como: Obesidade e grau 3 </p>) : (<p>Você é um monstro</p>)
+            (IMC > 40 > 250) ? (<p>Seu IMC é de {IMC}, Maior que 40, classificado como: Obesidade e grau 3 </p>) : (<p></p>)
             }
 
-            {IMC && (
+            {/* {IMC && (
                 <p>
                     Seu IMC é de {IMC},
                     {IMC < 18.5 && " MENOR QUE 18,5, classificado como: Magreza e grau 0"}
@@ -53,7 +53,7 @@ const Calc = () => {
                     {(IMC > 29.9 && IMC <= 39.9) && " ENTRE 30,0 E 39,9, classificado como: Obesidade e grau 2"}
                     {(IMC > 39.9 && IMC <= 250) && " Maior que 40, classificado como: Obesidade e grau 3"}
                 </p>
-            )}
+            )} */}
             
         </div>
     );
